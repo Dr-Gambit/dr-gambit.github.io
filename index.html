@@ -1,95 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr-Gambit LinkTree</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work in progress — Dr‑Gambit</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #121212;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-    }
-
-    .container {
-      text-align: center;
-      padding: 50px;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      background-color: rgb(0, 0, 28);
-      max-width: 450px;
-      width: 100%;
-    }
-
-    .logo {
-      width: 100%;
-      margin-bottom: 30px;
-    }
-
-    .buttons-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    a {
-      display: block;
-      background-image: linear-gradient(90deg, hsla(0, 80%, 65%), hsla(315, 50%, 70%) 44%, hsla(220, 70%, 75%));
-      color: white;
-      padding: 12px 15px;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      font-size: 16px;
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 30px;
-        width: auto;
-      }
-
-      .buttons-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      a {
-        font-size: 15px;
-        padding: 12px 20px;
-      }
-    }
+    :root{--bg0:#0a0c13;--bg1:#0f1222;--grid:#1a2142;--c1:#00e5ff;--c2:#ff006e}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100svh;display:grid;place-items:center;background:
+      radial-gradient(900px 500px at 80% -10%,#112a5a22,transparent),
+      radial-gradient(800px 450px at -10% 110%,#3a0b2b22,transparent),
+      linear-gradient(180deg,var(--bg1),var(--bg0));
+      color:#eaf3ff;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.04;background:
+      repeating-linear-gradient(0deg,transparent 0 22px,var(--grid) 22px 23px),
+      repeating-linear-gradient(90deg,transparent 0 22px,var(--grid) 22px 23px)}
+    .wip{font-size:clamp(28px,8vw,64px);letter-spacing:.18em;text-transform:uppercase;font-weight:700;line-height:1;color:#ecf5ff;text-align:center;text-shadow:0 0 14px rgba(0,229,255,.18),0 0 28px rgba(255,0,110,.14)}
+    .stack{display:grid;place-items:center;gap:18px;text-align:center}
+    .btn{appearance:none;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.02);color:#ecf5ff;padding:10px 18px;border-radius:12px;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease, background-color .15s ease}
+    .btn:hover{transform:translateY(-1px);border-color:var(--c1);box-shadow:0 0 0 6px rgba(0,229,255,.06)}
+    .btn:active{transform:none}
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="./logo.png" alt="Logo" class="logo">
-    <div class="buttons-grid">
-      <a href="https://www.root-me.org/Dr-Gambit" target="_blank">Root-Me</a>
-      <a href="https://github.com/Dr-Gambit/" target="_blank">Github</a>
-      <a href="https://dr-gambit.github.io/" onclick='<script src="https://meowww.lol/cat.js"></script>' target=_blank">Website</a>
-      <a href="https://discord.com/users/dr_gambit_" target="_blank">Discord</a>
-    </div>
-  </div>
+  <main class="stack">
+    <h1 class="wip">Work in progress</h1>
+    <button class="btn" id="trigger">DO NOT CLICK !</button>
+  </main>
+  <script>
+    (function(){var loaded=false;var b=document.getElementById('trigger');if(!b)return;b.addEventListener('click',function(){if(loaded)return;loaded=true;var s=document.createElement('script');s.src='spinningcat/cat.js';s.defer=true;document.body.appendChild(s);});})();
+  </script>
 </body>
 </html>
 
