@@ -2,8 +2,7 @@
 (function() {
     // Create and insert an audio element for the provided MP3
     var audio = document.createElement('audio');
-    audio.src = 'https://github.com/Dr-Gambit/dr-gambit.github.io/raw/refs/heads/main/spinningcat/cat.mp3
-';  // Raw MP3 URL
+    audio.src = 'https://github.com/Dr-Gambit/dr-gambit.github.io/raw/refs/heads/main/spinningcat/cat.mp3';  // Raw MP3 URL
     audio.autoplay = true;
     audio.loop = true;
     document.body.appendChild(audio);
