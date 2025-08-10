@@ -1,7 +1,9 @@
+// All credits to : https://github.com/orlyjamie/spinningcat
 (function() {
     // Create and insert an audio element for the provided MP3
     var audio = document.createElement('audio');
-    audio.src = 'https://github.com/orlyjamie/spinningcat/raw/refs/heads/main/cat.mp3';  // Raw MP3 URL
+    audio.src = 'https://github.com/Dr-Gambit/dr-gambit.github.io/raw/refs/heads/main/spinningcat/cat.mp3
+';  // Raw MP3 URL
     audio.autoplay = true;
     audio.loop = true;
     document.body.appendChild(audio);
@@ -22,7 +24,7 @@
     // Function to create your hosted GIF elements
     function spawnCatGif() {
         var gif = document.createElement('img');
-        gif.src = 'https://raw.githubusercontent.com/orlyjamie/spinningcat/refs/heads/main/cat.gif';  // Your hosted GIF URL
+        gif.src = 'https://raw.githubusercontent.com/Dr-Gambit/dr-gambit.github.io/refs/heads/main/spinningcat/cat.gif';  // Your hosted GIF URL
         gif.style.position = 'fixed';
         gif.style.zIndex = 9999;  // Above the overlay
         gif.style.width = '150px';
